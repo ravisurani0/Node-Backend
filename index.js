@@ -3,8 +3,13 @@ const bodyParser = require("body-parser");
 const fs = require("fs");
 const path = require("path");
 const app = express();
-const port = 3000;
+const PORT = process.env.PORT || 3030;
 
+// your code
+
+app.listen(PORT, () => {
+  console.log(`server started on port ${PORT}`);
+});
 app.use(bodyParser.json());
 app.use(express.static("public"));
 
