@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
     form.reset();
     quill.setContents([]); // Clear Quill editor
-    fetchItems();
+   window.location.reload()
   });
 
   // Delete article
@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
     await fetch(`/articles/${slug}`, {
       method: "DELETE",
     });
-    fetchItems();
+    window.location.reload()
   };
 
   fetchItems();
